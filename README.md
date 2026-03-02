@@ -14,7 +14,7 @@ The original Figma design has been exported as a PDF and included in this reposi
 
 The static webpage is implemented using clean and structured HTML.
 
-Styling and layout are handled entirely through CSS.
+Styling and layout are handled entirely through CSS and JS.
 
 The final output closely matches the original Figma design to maintain design-to-code accuracy.
 
