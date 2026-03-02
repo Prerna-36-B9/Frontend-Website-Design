@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visit Bharat</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" as="image" href="assets/BG-IMG.jpg">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="Logo">
+      </div>
+      <div class="nav-icons">
+        <a href="https://www.youtube.com/watch?v=KkiS209VOyw&t=18s" target="_blank"><img src="assets/youtube.svg" alt="YouTube"></a>
+        <a href="https://www.instagram.com/hsvb2047/?hl=en" target="_blank"><img src="assets/instagram.svg" alt="Instagram"></a>
+        <a href="https://x.com/ViksitBharat" target="_blank"><img src="assets/twitter.svg" alt="Twitter"></a>
+        <a href="https://www.facebook.com/HSVB2047/" target="_blank"><img src="assets/facebook.svg" alt="Facebook"></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <img src="assets/hero-text.svg" class="hero-text" alt="">
+      <a href="#past" class="journey-btn">BEGIN THE JOURNEY</a>
+    </div>
+  </section>
+
+  <section class="past-section" id="past">
+
+    <div class="past-heading">
+      <img src="assets/past-heading.svg" alt="">
+    </div>
+
+    <div class="cards-container">
+
+      <div class="card">
+        <img class="card-img parent" src="assets/card1-parent.png" alt="">
+        <img class="card-img child" src="assets/card1-child.png" alt="">
+        <img class="card-text" src="assets/card1-text.svg" alt="">
+      </div>
+
+      <div class="card">
+        <img class="card-img parent" src="assets/card2-parent.png" alt="">
+        <img class="card-img child" src="assets/card2-child.png" alt="">
+        <img class="card-text" src="assets/card2-text.svg" alt="">
+      </div>
+
+      <div class="card">
+        <img class="card-img parent" src="assets/card3-parent.png" alt="">
+        <img class="card-img child" src="assets/card3-child.png" alt="">
+        <img class="card-text" src="assets/card3-text.svg" alt="">
+      </div>
+
+    </div>
+
+    <div class="past-quote">
+      <img src="assets/quote.svg" alt="">
+    </div>
+
+  </section>
+
+  <section class="present-section">
+
+  <div class="present-left">
+
+    <img src="assets/present-heading.svg" class="present-heading" />
+
+
+    <div class="glass-group">
+
+      <div class="glass-item active" data-index="0">
+
+        <div class="glass-header-1">
+          <img src="assets/tab1-before.svg" />
+        </div>
+
+        <div class="glass-content">
+          <img src="assets/tab1-after.svg" class="after-svg" />
+
+          <div class="inner-btns">
+            <a href="https://en.wikipedia.org/wiki/Chandrayaan-3" class="inner-svg-btn">
+              <img src="assets/card-1-but-1.svg" alt="">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Mars_Orbiter_Mission" class="inner-svg-btn">
+              <img src="assets/card-1-but-2.svg" alt="">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Aditya-L1" class="inner-svg-btn">
+              <img src="assets/card-1-but-3.svg" alt="">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="glass-item" data-index="1">
+
+        <div class="glass-header">
+          <img src="assets/tab2-before.svg" />
+        </div>
+
+        <div class="glass-content">
+          <img src="assets/tab2-after.svg" class="after-svg" />
+
+          <div class="inner-btns">
+            <a href="https://en.wikipedia.org/wiki/Unified_Payments_Interface" class="inner-svg-btn">
+              <img src="assets/card-2-but-1.svg" alt="">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Startup_India" class="inner-svg-btn">
+              <img src="assets/card-2-but-2.svg" alt="">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Internet_in_India" class="inner-svg-btn">
+              <img src="assets/card-2-but-3.svg" alt="">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="glass-item" data-index="2">
+
+        <div class="glass-header">
+          <img src="assets/tab3-before.svg" />
+        </div>
+
+        <div class="glass-content">
+          <img src="assets/tab3-after.svg" class="after-svg" />
+
+          <div class="inner-btns">
+            <a href="https://en.wikipedia.org/wiki/Vande_Bharat_Express" class="inner-svg-btn">
+              <img src="assets/card-3-but-1.svg" alt="">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Urban_rail_transit_in_India" class="inner-svg-btn">
+              <img src="assets/card-3-but-2.svg" alt="">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Smart_Cities_Mission" class="inner-svg-btn">
+              <img src="assets/card-3-but-3.svg" alt="">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="present-right">
+    <img id="presentImage" src="assets/image1.png" />
+  </div>
+
+</section>
+
+
+<script>
+const items = document.querySelectorAll(".glass-item");
+const image = document.getElementById("presentImage");
+const images = [
+  "assets/image1.png",
+  "assets/image2.png",
+  "assets/image3.png"
+];
+
+items.forEach(item => {
+  item.addEventListener("click", () => {
+    items.forEach(i => i.classList.remove("active"));
+    item.classList.add("active");
+
+    const index = item.getAttribute("data-index");
+    image.src = images[index];
+  });
+});
+
+</script>
+
+<section class="future-section">
+
+  <div class="future-header">
+    <img src="assets/future-header.svg" alt="">
+  </div>
+
+  <div class="vision-box">
+    <img src="assets/vision-text.svg" alt="">
+  </div>
+
+  <div class="stats-header">
+    <div class="stats-left">
+      <img src="assets/stats-title.svg" alt="">
+    </div>
+    <div class="stats-right">
+      <img src="assets/stats-reference.svg" alt="">
+    </div>
+  </div>
+
+  <div class="stats-container">
+
+    <div class="stat-card">
+      <img src="assets/stat1.svg" alt="">
+    </div>
+
+    <div class="stat-card">
+      <img src="assets/stat2.svg" alt="">
+    </div>
+
+    <div class="stat-card">
+      <img src="assets/stat3.svg" alt="">
+    </div>
+
+    <div class="stat-card">
+      <img src="assets/stat4.svg" alt="">
+    </div>
+
+  </div>
+
+</section>
+
+<section class="vikasit-section">
+
+  <div class="vikasit-header">
+    <img src="assets/vikasit-heading.svg" alt="">
+  </div>
+
+  <div class="future-images">
+    <div class="future-img">
+      <img src="assets/future1.png" alt="">
+    </div>
+    <div class="future-img">
+      <img src="assets/future2.png" alt="">
+    </div>
+    <div class="future-img">
+      <img src="assets/future3.png" alt="">
+    </div>
+  </div>
+
+  <div class="videos-grid">
+
+    <div class="video-card">
+      <video src="assets/video1.mp4" muted autoplay loop></video>
+    </div>
+
+    <div class="video-card">
+      <video src="assets/video2.mp4" muted autoplay loop></video>
+    </div>
+
+    <div class="video-card">
+      <video src="assets/video3.mp4" muted autoplay loop></video>
+    </div>
+
+    <div class="video-card">
+      <video src="assets/video4.mp4" muted autoplay loop></video>
+    </div>
+
+  </div>
+
+  <div class="final-quote">
+    <img src="assets/final-quote.svg" alt="">
+  </div>
+
+</section>
+<script>
+document.querySelectorAll(".video-card video").forEach(video => {
+
+  video.parentElement.addEventListener("mouseenter", () => {
+    video.currentTime = 0.01; 
+    video.play();
+  });
+
+});
+</script>
+
+<footer class="main-footer">
+
+  <div class="tiranga-wrapper">
+
+    <img src="assets/tiranga-bg.svg" class="tiranga-bg" alt="">
+
+    <div class="footer-overlay">
+
+      <img src="assets/footer-text.svg" class="footer-text" alt="">
+
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/prerna-gupta-93b81032a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon">
+          <img src="assets/linkedin.svg" alt="LinkedIn">
+        </a>
+
+        <a href="https://www.behance.net/prernagupta33" target="_blank" class="social-icon">
+          <img src="assets/behance.svg" alt="Behance">
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+</body>
+</html>
