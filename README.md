@@ -37,3 +37,6 @@ Design complete layouts in Figma
 Convert design systems into responsive frontend code
 
 Maintain pixel-level design consistency
+
+© 2026 Prerna Gupta. All Rights Reserved.
+This design and code may not be copied, reproduced, distributed, or used without explicit permission.
